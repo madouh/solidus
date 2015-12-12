@@ -1,0 +1,97 @@
+.line-item.editing {
+  .edit-line-item,
+  .delete-line-item,
+  .line-item-qty-show {
+    display: none !important;
+  }
+}
+
+.line-item:not(.editing) {
+  .save-line-item,
+  .cancel-line-item,
+  .line-item-qty-edit {
+    display: none !important;
+  }
+}
+
+// Customize orders filter
+[data-hook="admin_orders_index_search"] {
+  select[data-placeholder="Status"] {
+    width: 100%;
+  }
+
+  .select2-container {
+    width: 100% !important;
+  }
+}
+
+// Order-total
+[data-hook="order_details_total"]{
+  text-align: center;
+
+  .order-total {
+    font-size: 35px;
+    font-weight: $font-weight-bold;
+    color: $color-success;
+  }
+}
+
+// Order-total
+[data-hook="customer_details_total"]{
+  text-align: center;
+
+  .customer {
+    font-size: 20px;
+    font-weight: $font-weight-bold;
+    color: $color-success;
+  }
+}
+
+[data-hook="admin_order_form_fields"] {
+  legend.stock-location {
+    color: $color-body-text;
+
+    .shipment-number {
+      color: $color-success;
+    }
+    .stock-location-name {
+      color: $color-success;
+    }
+  }
+}
+
+// Customize orduct add fieldset
+#add-line-item {
+  fieldset {
+    padding: 10px 0;
+
+    .field {
+      margin-bottom: 0;
+
+      input[type="text"], input[type="number"] {
+        width: 100%;
+      }
+    }
+    .actions {
+      .button {
+        margin-top: 28px;
+      }
+    }
+  }
+}
+
+[data-hook="adjustments_new_coupon_code"] {
+  margin-bottom: 18px;
+}
+
+#risk_analysis legend {
+  background-color: #c00;
+  color: #FFF;
+  font-size: 2em;
+}
+
+form#admin-ship-shipment {
+  display: block;
+  text-align: center;
+  input[type='submit'] { margin-left: 5px; }
+}
