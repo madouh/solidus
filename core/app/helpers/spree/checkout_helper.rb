@@ -13,10 +13,10 @@ module Spree
         current_index = states.index(@order.state)
         state_index = states.index(state)
 
-        if state_index < current_index
+        # if state_index < current_index
           css_classes << 'completed'
-          text = link_to text, checkout_state_path(state)
-        end
+          # text = link_to text, checkout_state_path(state)
+        # end
 
         css_classes << 'next' if state_index == current_index + 1
         css_classes << 'current' if state == @order.state
